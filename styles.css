@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 100vh;
+  padding: 0.5rem 0;
+}
+
+.stripe {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  width: 20%;
+  position: absolute;
+}
+.block1 {
+  background-color: #244f75;
+  overflow: hidden;
+  animation-name: stripe1;
+  animation-duration: 0.5s;
+}
+@keyframes stripe1 {
+  0% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.block1:hover::before {
+  transform: skew(0deg);
+}
+.block1::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: white;
+  transform: skew(30deg);
+  opacity: 0.1;
+  transition: 0.2s linear;
+}
+.block2 {
+  background-color: #60bfbf;
+  left: 20%;
+  overflow: hidden;
+  animation-name: stripe2;
+  animation-duration: 0.6s;
+}
+@keyframes stripe2 {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.block2:hover::before {
+  transform: skew(0deg);
+}
+.block2::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: white;
+  transform: skew(30deg);
+  opacity: 0.1;
+  transition: 0.2s linear;
+}
+.block3 {
+  background-color: #8c4b7e;
+  left: 40%;
+  overflow: hidden;
+  animation-name: stripe3;
+  animation-duration: 0.7s;
+}
+@keyframes stripe3 {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.block3:hover::before {
+  transform: skew(0deg);
+}
+.block3::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: white;
+  transform: skew(30deg);
+  opacity: 0.1;
+  transition: 0.2s linear;
+}
+.block4 {
+  background-color: #f8bb44;
+  left: 60%;
+  overflow: hidden;
+  animation-name: stripe4;
+  animation-duration: 0.8s;
+}
+@keyframes stripe4 {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.block4:hover::before {
+  transform: skew(0deg);
+}
+.block4::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: white;
+  transform: skew(30deg);
+  opacity: 0.1;
+  transition: 0.2s linear;
+}
+.block5 {
+  background-color: #f24b4b;
+  left: 80%;
+  top: 0;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  animation-name: stripe5;
+  animation-duration: 0.9s;
+}
+@keyframes stripe5 {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.block5:hover::before {
+  transform: skew(0deg);
+}
+.block5::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: white;
+  transform: skew(30deg);
+  opacity: 0.1;
+  transition: 0.2s linear;
+}
+
+.icon-heart {
+  color: white;
+}
+.letras {
+  display: inline-block;
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  color: white;
+  font-size: 1.5vw;
+}
+.a {
+  display: inline-block;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  color: white;
+  font-size: 1.5vw;
+}
