@@ -23,9 +23,11 @@ body {
   width: 20%;
   position: absolute;
 }
+/*stripe fondo base + animación de aparición en pantalla, así por cada bloque*/
+
 .block1 {
   background-color: #244f75;
-  overflow: hidden;
+  overflow: hidden; /*hace que el "skew" del elemento, no invada los elementos vecinos*/
   animation-name: stripe1;
   animation-duration: 0.5s;
 }
@@ -39,9 +41,8 @@ body {
     transform: translate3d(0, 0, 0);
   }
 }
-.block1:hover::before {
-  transform: skew(0deg);
-}
+/*fondo semitransparente que cubre parte del stripe*/
+
 .block1::before {
   content: "";
   display: block;
@@ -52,8 +53,14 @@ body {
   background-color: white;
   transform: skew(30deg);
   opacity: 0.1;
-  transition: 0.2s linear;
+  transition: 0.2s linear; /*transición entre el fondo semitransparente en skew y cuando cubre al elemento Bloque (:hover)*/
 }
+/*fondo semitransparente, que al pasarse el cursor cubre completamente el fondo original del stripe */
+.block1:hover::before {
+  transform: skew(0deg);
+}
+
+/*Lo mismo con cada bloque*/
 .block2 {
   background-color: #60bfbf;
   left: 20%;
@@ -71,9 +78,6 @@ body {
     transform: translate3d(0, 0, 0);
   }
 }
-.block2:hover::before {
-  transform: skew(0deg);
-}
 .block2::before {
   content: "";
   display: block;
@@ -86,6 +90,10 @@ body {
   opacity: 0.1;
   transition: 0.2s linear;
 }
+.block2:hover::before {
+  transform: skew(0deg);
+}
+
 .block3 {
   background-color: #8c4b7e;
   left: 40%;
@@ -103,10 +111,6 @@ body {
     transform: translate3d(0, 0, 0);
   }
 }
-
-.block3:hover::before {
-  transform: skew(0deg);
-}
 .block3::before {
   content: "";
   display: block;
@@ -118,6 +122,10 @@ body {
   opacity: 0.1;
   transition: 0.2s linear;
 }
+.block3:hover::before {
+  transform: skew(0deg);
+}
+
 .block4 {
   background-color: #f8bb44;
   left: 60%;
@@ -135,10 +143,6 @@ body {
     transform: translate3d(0, 0, 0);
   }
 }
-
-.block4:hover::before {
-  transform: skew(0deg);
-}
 .block4::before {
   content: "";
   display: block;
@@ -150,6 +154,10 @@ body {
   opacity: 0.1;
   transition: 0.2s linear;
 }
+.block4:hover::before {
+  transform: skew(0deg);
+}
+
 .block5 {
   background-color: #f24b4b;
   left: 80%;
@@ -169,9 +177,6 @@ body {
     transform: translate3d(0, 0, 0);
   }
 }
-.block5:hover::before {
-  transform: skew(0deg);
-}
 .block5::before {
   content: "";
   display: block;
@@ -183,7 +188,10 @@ body {
   opacity: 0.1;
   transition: 0.2s linear;
 }
-
+.block5:hover::before {
+  transform: skew(0deg);
+}
+/*icono bajado en formato "texto" en un CSS apartte, y enlazado en el HTML*/
 .icon-heart {
   color: white;
 }
